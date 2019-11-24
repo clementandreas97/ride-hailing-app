@@ -16,8 +16,43 @@ export default function App() {
           </View>
         </View>
         {/* Header Section */}
-        <View>
+        <View style={{marginHorizontal: 16, marginTop: 8}}>
+          {/* Upper Header Section */}
+          <View style={{borderTopLeftRadius: 4, borderTopRightRadius: 4, backgroundColor: '#2C5FB8', flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 16, alignItems: 'center', paddingVertical: 16}}>
+            <View style={{width: 72, height: 32, backgroundColor: 'pink'}}>
 
+            </View>
+            <Text style={{fontWeight: 'bold', fontSize: 16, color: 'white'}}>
+            Rp. 50.000
+            </Text>
+          </View>
+          {/* Lower Header Section */}
+          <View style={{borderBottomLeftRadius: 4, borderBottomRightRadius: 4, backgroundColor: '#2F65BD', flexDirection: 'row', justifyContent: 'space-around', paddingTop: 20, paddingBottom: 12}}>
+            <View style={{alignItems: 'center'}}>
+              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
+              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
+                Pay
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
+              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
+                Nearby
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
+              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
+                Top Up
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
+              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
+                More
+              </Text>
+            </View>
+          </View>
         </View>
       </View>
       <View style={styles.tabBar}> 
