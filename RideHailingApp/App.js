@@ -31,26 +31,65 @@ export default function App() {
             <View style={{alignItems: 'center'}}>
               <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
               <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                Pay
+                Header Menu 1
               </Text>
             </View>
             <View style={{alignItems: 'center'}}>
               <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
               <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                Nearby
+                Header Menu 2
               </Text>
             </View>
             <View style={{alignItems: 'center'}}>
               <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
               <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                Top Up
+                Header Menu 3
               </Text>
             </View>
             <View style={{alignItems: 'center'}}>
               <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
               <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                More
+                Header Menu 4
               </Text>
+            </View>
+          </View>
+        </View>
+        {/* Main DOPE Section */}
+        <View style={{width: '100%', flexDirection: 'row', flexWrap: 'wrap', marginTop: 16, paddingHorizontal: 0, justifyContent: 'space-around'}}>
+          <View style={{justifyContent: 'space-around', flexDirection: 'row', width: '100%'}}>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 1</Text>
+            </View>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 2</Text>
+            </View>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 3</Text>
+            </View>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 4</Text>
+            </View>
+          </View>
+          <View style={{justifyContent: 'space-around', flexDirection: 'row', width: '100%', marginTop: 8}}>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 5</Text>
+            </View>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 6</Text>
+            </View>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 7</Text>
+            </View>
+            <View style={{width: '25%', alignItems: 'center'}}>
+              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
+              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 8</Text>
             </View>
           </View>
         </View>
@@ -109,6 +148,6 @@ const styles = StyleSheet.create({
   tabBarIcon: {
     width: 26,
     height: 26,
-    backgroundColor: 'white'
+    backgroundColor: 'pink'
   }
 });
