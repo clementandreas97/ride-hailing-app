@@ -8,6 +8,11 @@ import CollectionViewWithTitleMore from './src/containers/organisms/collection-w
 import TabBarController from './src/containers/organisms/tab-bar';
 import ButtonAV from './src/components/atoms/button-av';
 import SmallButtonAV from './src/components/atoms/small-button-av';
+import BannerTitleSubtitleButton from './src/containers/organisms/banner-with-title-subtitle-button';
+import CardView from './src/containers/organisms/card-view';
+import DopeSection from './src/containers/organisms/dope-section';
+
+const dopeItems = ['DOPE 1', 'DOPE 2', 'DOPE 3', 'DOPE 4', 'DOPE 5', 'DOPE 6', 'DOPE 7', 'DOPE 8']
 
 export default function App() {
   return (
@@ -35,51 +40,14 @@ export default function App() {
           </View>
         </View>
         {/* Main DOPE Section */}
-        <View style={{width: '100%', flexDirection: 'row', flexWrap: 'wrap', marginTop: 16, paddingHorizontal: 0, justifyContent: 'space-around'}}>
-          <View style={{justifyContent: 'space-around', flexDirection: 'row', width: '100%', flexWrap: 'wrap'}}>
-            <DopeMV title='DOPE 1'/>
-            <DopeMV title='DOPE 2'/>
-            <DopeMV title='DOPE 3'/>
-            <DopeMV title='DOPE 4'/>
-            <DopeMV title='DOPE 5'/>
-            <DopeMV title='DOPE 6'/>
-            <DopeMV title='DOPE 7'/>
-            <DopeMV title='DOPE 8'/>
-          </View>
-        </View>
+        <DopeSection dopeItems={dopeItems}/>
         {/* Separator */}
         <SeparatorAV customHeight={16} customMarginTop={16}/>
         {/* Banner Section */}
         {/* paddingBottom to add Bottom Border */}
-        <View style={{flex: 1, paddingHorizontal: 16, marginTop: 16, borderBottomColor: '#F2F2F4', borderBottomWidth: 2, paddingBottom: 16}}>
-          {/* Image Section */}
-          <View style={{backgroundColor: 'pink', height: 200, borderRadius: 16, width: '100%'}}>
-            <View style={{top: 16, left: 16, width: 60, height: 16, backgroundColor: 'white'}}></View>
-          </View>
-          <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 16}}>Banner Title</Text>
-          <Text style={{marginTop: 4, fontSize: 14, color: '#7A7A7A'}}>Banner Subtitle</Text>
-          {/* Custom Button */}
-          <View style={{alignSelf: 'flex-end'}}>
-            <ButtonAV buttonTitle='Banner Button'/>
-          </View>
-        </View>
+        <BannerTitleSubtitleButton title='Banner Title' subtitle='Banner Subtitle' buttonTitle='Banner Button'/>
         {/* Card View */}
-        <TouchableOpacity style={{flex: 1, backgroundColor: 'white', marginHorizontal: 16, marginVertical: 16}}>
-          {/* Card Container */}
-          <View style={{backgroundColor: 'white', height: 200}}>
-            {/* Upper Card Section */}
-            <View style={{backgroundColor: 'pink', height: '70%', borderTopLeftRadius: 16, borderTopRightRadius: 16, borderLeftColor: '#F2F2F4', borderLeftWidth: 2, borderRightColor: '#F2F2F4', borderRightWidth: 2}}></View>
-            {/* Lower Card Section */}
-            <View style={{position: 'relative', backgroundColor: 'white', height: '30%', borderBottomLeftRadius: 16, borderBottomRightRadius: 16, borderBottomColor: '#F2F2F4', borderBottomWidth: 2, borderLeftColor: '#F2F2F4', borderLeftWidth: 2, borderRightColor: '#F2F2F4', borderRightWidth: 2, paddingVertical: 8, paddingHorizontal: 8}}>
-              <Text style={{fontWeight: 'bold', fontSize: 12}}>Card Title</Text>
-              <Text style={{fontSize: 12, marginTop: 2}}>Card Subtitle</Text>
-              {/* Button */}
-              <View style={{alignSelf: 'flex-end', position: 'absolute', right: 12, bottom: 12}}>
-                <SmallButtonAV buttonTitle='Card Button'/>
-              </View>
-            </View>
-          </View>
-        </TouchableOpacity>
+        <CardView title='Card Title' subtitle='Card Subtitle' buttonTitle='Card Button'/>
         {/* Horizontal Collection */}
         <CollectionViewWithTitleMore title='Collection Title' linkTitle='More'/>
       </ScrollView>
