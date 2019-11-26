@@ -1,13 +1,10 @@
 import React from 'react';
-import { Button, SafeAreaView, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import DopeMV from './src/components/molecules/dope-mv';
+import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 import ImageTextMV from './src/components/molecules/image-text-mv';
 import InputTextWithIconMV from './src/components/molecules/input-text-icon-mv';
 import SeparatorAV from './src/components/atoms/separator-av';
 import CollectionViewWithTitleMore from './src/containers/organisms/collection-with-title-more';
 import TabBarController from './src/containers/organisms/tab-bar';
-import ButtonAV from './src/components/atoms/button-av';
-import SmallButtonAV from './src/components/atoms/small-button-av';
 import BannerTitleSubtitleButton from './src/containers/organisms/banner-with-title-subtitle-button';
 import CardView from './src/containers/organisms/card-view';
 import DopeSection from './src/containers/organisms/dope-section';
