@@ -5,6 +5,9 @@ import ImageTextMV from './src/components/molecules/image-text-mv';
 import InputTextWithIconMV from './src/components/molecules/input-text-icon-mv';
 import SeparatorAV from './src/components/atoms/separator-av';
 import CollectionViewWithTitleMore from './src/containers/organisms/collection-with-title-more';
+import TabBarController from './src/containers/organisms/tab-bar';
+import ButtonAV from './src/components/atoms/button-av';
+import SmallButtonAV from './src/components/atoms/small-button-av';
 
 export default function App() {
   return (
@@ -56,9 +59,9 @@ export default function App() {
           <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 16}}>Banner Title</Text>
           <Text style={{marginTop: 4, fontSize: 14, color: '#7A7A7A'}}>Banner Subtitle</Text>
           {/* Custom Button */}
-          <TouchableOpacity style={{backgroundColor: 'pink', borderRadius: 4, paddingHorizontal: 12, paddingVertical: 8, marginTop: 4, alignSelf: 'flex-end'}}>
-            <Text style={{fontSize: 12, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>Button</Text>
-          </TouchableOpacity>
+          <View style={{alignSelf: 'flex-end'}}>
+            <ButtonAV buttonTitle='Banner Button'/>
+          </View>
         </View>
         {/* Card View */}
         <TouchableOpacity style={{flex: 1, backgroundColor: 'white', marginHorizontal: 16, marginVertical: 16}}>
@@ -71,9 +74,9 @@ export default function App() {
               <Text style={{fontWeight: 'bold', fontSize: 12}}>Card Title</Text>
               <Text style={{fontSize: 12, marginTop: 2}}>Card Subtitle</Text>
               {/* Button */}
-              <TouchableOpacity style={{backgroundColor: 'pink', borderRadius: 4, paddingHorizontal: 8, paddingVertical: 4, marginTop: 4, alignSelf: 'flex-end', position: 'absolute', right: 12, bottom: 12}}>
-                <Text style={{fontSize: 10, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>Button</Text>
-              </TouchableOpacity>
+              <View style={{alignSelf: 'flex-end', position: 'absolute', right: 12, bottom: 12}}>
+                <SmallButtonAV buttonTitle='Card Button'/>
+              </View>
             </View>
           </View>
         </TouchableOpacity>
@@ -81,60 +84,7 @@ export default function App() {
         <CollectionViewWithTitleMore title='Collection Title' linkTitle='More'/>
       </ScrollView>
       {/* TabBar Section */}
-      <View style={styles.tabBar}> 
-        <View style={[styles.tabBarContainer]}>
-          <View style={styles.tabBarIcon}></View>
-          <Text style={styles.tabBarTextStyle}>Home</Text>
-        </View>
-        <View style={[styles.tabBarContainer]}>
-          <View style={styles.tabBarIcon}></View>
-          <Text style={styles.tabBarTextStyle}>Orders</Text>
-        </View>
-        <View style={[styles.tabBarContainer]}>
-          <View style={styles.tabBarIcon}></View>
-          <Text style={styles.tabBarTextStyle}>Help</Text>
-        </View>
-        <View style={[styles.tabBarContainer]}>
-          <View style={styles.tabBarIcon}></View>
-          <Text style={styles.tabBarTextStyle}>Inbox</Text>
-        </View>
-        <View style={[styles.tabBarContainer]}>
-          <View style={styles.tabBarIcon}></View>
-          <Text style={styles.tabBarTextStyle}>Account</Text>
-        </View>
-      </View>
+      <TabBarController />
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'pink',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  tabBar: {
-    height: 48,
-    backgroundColor: 'white',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    borderTopWidth: 1,
-    borderTopColor: '#E8E8E8'
-  },
-  tabBarContainer: {
-    flex: 1, 
-    alignItems: 'center', 
-    justifyContent: 'flex-start',
-    paddingTop: 8
-  },
-  tabBarTextStyle: {
-    fontSize: 10,
-    color: '#545454'
-  },
-  tabBarIcon: {
-    width: 26,
-    height: 26,
-    backgroundColor: 'pink'
-  }
-});
