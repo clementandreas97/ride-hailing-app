@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1, backgroundColor: 'white'}}>
+      <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
         {/* SearchBar Section */}
         <View style={{paddingHorizontal: 16, flexDirection: 'row', marginTop: 68, alignItems: 'center'}}>
           <View style={{flex: 1, position: 'relative'}}>
@@ -93,7 +93,25 @@ export default function App() {
             </View>
           </View>
         </View>
-      </View>
+        {/* Separator */}
+        <View style={{height: 16, backgroundColor: '#F2F2F4', marginTop: 16}}></View>
+        {/* Banner Section */}
+        {/* paddingBottom to add Bototm Border */}
+        <View style={{flex: 1, paddingHorizontal: 16, marginTop: 16, borderBottomColor: '#F2F2F4', borderBottomWidth: 2, paddingBottom: 16}}>
+          <View style={{position: 'relative'}}>
+            {/* Floating Section */}
+            <View style={{backgroundColor: 'pink', height: 200, borderRadius: 16, width: '100%'}}></View>
+            <View style={{position: 'absolute', top: 16, left: 16, width: 60, height: 16, backgroundColor: 'white'}}></View>
+          </View>
+          <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 16}}>Banner Title</Text>
+          <Text style={{marginTop: 4, fontSize: 14, color: '#7A7A7A'}}>Banner Subtitle</Text>
+          {/* Custom Button */}
+          <TouchableOpacity style={{backgroundColor: 'pink', borderRadius: 4, paddingHorizontal: 12, paddingVertical: 8, marginTop: 4, alignSelf: 'flex-end'}}>
+            <Text style={{fontSize: 12, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>Button</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+      {/* TabBar Section */}
       <View style={styles.tabBar}> 
         <View style={[styles.tabBarContainer]}>
           <View style={styles.tabBarIcon}></View>
