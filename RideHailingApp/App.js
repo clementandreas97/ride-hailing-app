@@ -98,10 +98,9 @@ export default function App() {
         {/* Banner Section */}
         {/* paddingBottom to add Bototm Border */}
         <View style={{flex: 1, paddingHorizontal: 16, marginTop: 16, borderBottomColor: '#F2F2F4', borderBottomWidth: 2, paddingBottom: 16}}>
-          <View style={{position: 'relative'}}>
-            {/* Floating Section */}
-            <View style={{backgroundColor: 'pink', height: 200, borderRadius: 16, width: '100%'}}></View>
-            <View style={{position: 'absolute', top: 16, left: 16, width: 60, height: 16, backgroundColor: 'white'}}></View>
+          {/* Image Section */}
+          <View style={{backgroundColor: 'pink', height: 200, borderRadius: 16, width: '100%'}}>
+            <View style={{top: 16, left: 16, width: 60, height: 16, backgroundColor: 'white'}}></View>
           </View>
           <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 16}}>Banner Title</Text>
           <Text style={{marginTop: 4, fontSize: 14, color: '#7A7A7A'}}>Banner Subtitle</Text>
@@ -109,6 +108,23 @@ export default function App() {
           <TouchableOpacity style={{backgroundColor: 'pink', borderRadius: 4, paddingHorizontal: 12, paddingVertical: 8, marginTop: 4, alignSelf: 'flex-end'}}>
             <Text style={{fontSize: 12, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>Button</Text>
           </TouchableOpacity>
+        </View>
+        {/* Card View */}
+        <View style={{flex: 1, backgroundColor: 'white', marginHorizontal: 16, marginVertical: 16}}>
+          {/* Card Container */}
+          <View style={{backgroundColor: 'white', height: 200}}>
+            {/* Upper Card Section */}
+            <View style={{backgroundColor: 'pink', height: '70%', borderTopLeftRadius: 16, borderTopRightRadius: 16, borderLeftColor: '#F2F2F4', borderLeftWidth: 2, borderRightColor: '#F2F2F4', borderRightWidth: 2}}></View>
+            {/* Lower Card Section */}
+            <View style={{position: 'relative', backgroundColor: 'white', height: '30%', borderBottomLeftRadius: 16, borderBottomRightRadius: 16, borderBottomColor: '#F2F2F4', borderBottomWidth: 2, borderLeftColor: '#F2F2F4', borderLeftWidth: 2, borderRightColor: '#F2F2F4', borderRightWidth: 2, paddingVertical: 8, paddingHorizontal: 8}}>
+              <Text style={{fontWeight: 'bold', fontSize: 12}}>Card Title</Text>
+              <Text style={{fontSize: 12, marginTop: 2}}>Card Subtitle</Text>
+              {/* Button */}
+              <TouchableOpacity style={{backgroundColor: 'pink', borderRadius: 4, paddingHorizontal: 8, paddingVertical: 4, marginTop: 4, alignSelf: 'flex-end', position: 'absolute', right: 12, bottom: 12}}>
+                <Text style={{fontSize: 10, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>Button</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
       </ScrollView>
       {/* TabBar Section */}
