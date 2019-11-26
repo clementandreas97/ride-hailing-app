@@ -1,19 +1,16 @@
 import React from 'react';
 import { Button, SafeAreaView, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import DopeMV from './src/components/molecules/dope-mv';
+import ImageTextMV from './src/components/molecules/image-text-mv';
+import InputTextWithIconMV from './src/components/molecules/input-text-icon-mv';
+import SeparatorAV from './src/components/atoms/separator-av';
+import CollectionViewWithTitleMore from './src/containers/organisms/collection-with-title-more';
 
 export default function App() {
   return (
     <SafeAreaView style={{flex: 1}}>
       {/* SearchBar Section with NavBar Margin Handling */}
-      <View style={{paddingHorizontal: 16, flexDirection: 'row', marginVertical: 8, alignItems: 'center'}}>
-          <View style={{flex: 1, position: 'relative'}}>
-            <View style={{backgroundColor: 'pink', width: 16, height: 16, position: 'absolute', top: 12, left: 12}}></View>
-            <TextInput placeholder='Current Text Value' style={{paddingLeft: 32, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, height: 40, fontSize: 12}}></TextInput>
-          </View>
-          <View style={{marginLeft: 16}}>
-            <View style={{backgroundColor: 'pink', width: 36, height: 36}}></View>
-          </View>
-      </View>
+      <InputTextWithIconMV placeholder='Search Here!'/>
       <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
         {/* Header Section */}
         <View style={{marginHorizontal: 16, marginTop: 8}}>
@@ -28,75 +25,29 @@ export default function App() {
           </View>
           {/* Lower Header Section */}
           <View style={{borderBottomLeftRadius: 4, borderBottomRightRadius: 4, backgroundColor: '#2F65BD', flexDirection: 'row', justifyContent: 'space-around', paddingTop: 20, paddingBottom: 12}}>
-            <View style={{alignItems: 'center'}}>
-              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
-              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                Header Menu 1
-              </Text>
-            </View>
-            <View style={{alignItems: 'center'}}>
-              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
-              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                Header Menu 2
-              </Text>
-            </View>
-            <View style={{alignItems: 'center'}}>
-              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
-              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                Header Menu 3
-              </Text>
-            </View>
-            <View style={{alignItems: 'center'}}>
-              <View style={{backgroundColor: 'pink', width: 32, height: 32}}></View>
-              <Text style={{marginTop: 8, fontWeight: 'bold', fontSize: 12, color: 'white'}}>
-                Header Menu 4
-              </Text>
-            </View>
+            <ImageTextMV title='Header Menu 1'/>
+            <ImageTextMV title='Header Menu 2'/>
+            <ImageTextMV title='Header Menu 3'/>
+            <ImageTextMV title='Header Menu 4'/>
           </View>
         </View>
         {/* Main DOPE Section */}
         <View style={{width: '100%', flexDirection: 'row', flexWrap: 'wrap', marginTop: 16, paddingHorizontal: 0, justifyContent: 'space-around'}}>
-          <View style={{justifyContent: 'space-around', flexDirection: 'row', width: '100%'}}>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 1</Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 2</Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 3</Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 4</Text>
-            </View>
-          </View>
-          <View style={{justifyContent: 'space-around', flexDirection: 'row', width: '100%', marginTop: 8}}>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 5</Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 6</Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 7</Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View style={{width: 50, height: 50, backgroundColor: 'pink', borderRadius: 18, borderWidth: 1, borderColor: '#EFEFEF'}}></View>
-              <Text style={{marginTop: 4, fontWeight: 'bold', fontSize: 12, color: '#545454', textAlign: 'center'}}>DOPE 8</Text>
-            </View>
+          <View style={{justifyContent: 'space-around', flexDirection: 'row', width: '100%', flexWrap: 'wrap'}}>
+            <DopeMV title='DOPE 1'/>
+            <DopeMV title='DOPE 2'/>
+            <DopeMV title='DOPE 3'/>
+            <DopeMV title='DOPE 4'/>
+            <DopeMV title='DOPE 5'/>
+            <DopeMV title='DOPE 6'/>
+            <DopeMV title='DOPE 7'/>
+            <DopeMV title='DOPE 8'/>
           </View>
         </View>
         {/* Separator */}
-        <View style={{height: 16, backgroundColor: '#F2F2F4', marginTop: 16}}></View>
+        <SeparatorAV customHeight={16} customMarginTop={16}/>
         {/* Banner Section */}
-        {/* paddingBottom to add Bototm Border */}
+        {/* paddingBottom to add Bottom Border */}
         <View style={{flex: 1, paddingHorizontal: 16, marginTop: 16, borderBottomColor: '#F2F2F4', borderBottomWidth: 2, paddingBottom: 16}}>
           {/* Image Section */}
           <View style={{backgroundColor: 'pink', height: 200, borderRadius: 16, width: '100%'}}>
@@ -127,39 +78,7 @@ export default function App() {
           </View>
         </TouchableOpacity>
         {/* Horizontal Collection */}
-        <View style={{marginVertical: 16}}>
-          <View style={{marginHorizontal: 16,flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Text style={{fontWeight: 'bold', fontSize: 14}}>Scroller Title</Text>
-            <Text style={{fontWeight: 'bold', fontSize: 14, color: 'pink'}}>More</Text>
-          </View>
-          <ScrollView horizontal style={{marginTop: 8, paddingBottom: 8, paddingHorizontal: 16}}>
-            {/* Collection Cell 1 */}
-            <View style={{marginRight: 16}}>
-              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
-              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 1</Text>
-            </View>
-            {/* Collection Cell 2 */}
-            <View style={{marginRight: 16}}>
-              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
-              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 2</Text>
-            </View>
-            {/* Collection Cell 3 */}
-            <View style={{marginRight: 16}}>
-              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
-              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 3</Text>
-            </View>
-            {/* Collection Cell 4 */}
-            <View style={{marginRight: 16}}>
-              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
-              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 4</Text>
-            </View>
-            {/* Collection Cell 5 */}
-            <View style={{marginRight: 16}}>
-              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
-              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 5</Text>
-            </View>
-          </ScrollView>
-        </View>
+        <CollectionViewWithTitleMore title='Collection Title' linkTitle='More'/>
       </ScrollView>
       {/* TabBar Section */}
       <View style={styles.tabBar}> 
