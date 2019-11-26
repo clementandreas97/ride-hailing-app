@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Button, SafeAreaView, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1}}>
       <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
-        {/* SearchBar Section */}
-        <View style={{paddingHorizontal: 16, flexDirection: 'row', marginTop: 68, alignItems: 'center'}}>
+        {/* SearchBar Section with NavBar Margin Handling */}
+        <View style={{paddingHorizontal: 16, flexDirection: 'row', marginTop: 44, alignItems: 'center'}}>
           <View style={{flex: 1, position: 'relative'}}>
             <View style={{backgroundColor: 'pink', width: 16, height: 16, position: 'absolute', top: 12, left: 12}}></View>
             <TextInput placeholder='Current Text Value' style={{paddingLeft: 32, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, height: 40, fontSize: 12}}></TextInput>
@@ -110,7 +110,7 @@ export default function App() {
           </TouchableOpacity>
         </View>
         {/* Card View */}
-        <View style={{flex: 1, backgroundColor: 'white', marginHorizontal: 16, marginVertical: 16}}>
+        <TouchableOpacity style={{flex: 1, backgroundColor: 'white', marginHorizontal: 16, marginVertical: 16}}>
           {/* Card Container */}
           <View style={{backgroundColor: 'white', height: 200}}>
             {/* Upper Card Section */}
@@ -125,6 +125,40 @@ export default function App() {
               </TouchableOpacity>
             </View>
           </View>
+        </TouchableOpacity>
+        {/* Horizontal Collection */}
+        <View style={{marginVertical: 16}}>
+          <View style={{marginHorizontal: 16,flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Text style={{fontWeight: 'bold', fontSize: 14}}>Scroller Title</Text>
+            <Text style={{fontWeight: 'bold', fontSize: 14, color: 'pink'}}>More</Text>
+          </View>
+          <ScrollView horizontal style={{marginTop: 8, paddingBottom: 8, paddingHorizontal: 16}}>
+            {/* Collection Cell 1 */}
+            <View style={{marginRight: 16}}>
+              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
+              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 1</Text>
+            </View>
+            {/* Collection Cell 2 */}
+            <View style={{marginRight: 16}}>
+              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
+              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 2</Text>
+            </View>
+            {/* Collection Cell 3 */}
+            <View style={{marginRight: 16}}>
+              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
+              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 3</Text>
+            </View>
+            {/* Collection Cell 4 */}
+            <View style={{marginRight: 16}}>
+              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
+              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 4</Text>
+            </View>
+            {/* Collection Cell 5 */}
+            <View style={{marginRight: 16}}>
+              <View style={{backgroundColor: 'pink', height: 100, width: 100, borderRadius: 4, marginBottom: 8}}></View>
+              <Text style={{fontSize: 12, fontWeight: 'bold', paddingLeft: 2}}>Cell Text 5</Text>
+            </View>
+          </ScrollView>
         </View>
       </ScrollView>
       {/* TabBar Section */}
@@ -150,7 +184,7 @@ export default function App() {
           <Text style={styles.tabBarTextStyle}>Account</Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -162,7 +196,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   tabBar: {
-    height: 68,
+    height: 48,
     backgroundColor: 'white',
     flexDirection: 'row',
     justifyContent: 'space-around',
