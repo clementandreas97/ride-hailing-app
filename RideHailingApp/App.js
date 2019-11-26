@@ -4,9 +4,8 @@ import { Button, SafeAreaView, StyleSheet, ScrollView, Text, TextInput, Touchabl
 export default function App() {
   return (
     <SafeAreaView style={{flex: 1}}>
-      <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
-        {/* SearchBar Section with NavBar Margin Handling */}
-        <View style={{paddingHorizontal: 16, flexDirection: 'row', marginTop: 44, alignItems: 'center'}}>
+      {/* SearchBar Section with NavBar Margin Handling */}
+      <View style={{paddingHorizontal: 16, flexDirection: 'row', marginVertical: 8, alignItems: 'center'}}>
           <View style={{flex: 1, position: 'relative'}}>
             <View style={{backgroundColor: 'pink', width: 16, height: 16, position: 'absolute', top: 12, left: 12}}></View>
             <TextInput placeholder='Current Text Value' style={{paddingLeft: 32, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, height: 40, fontSize: 12}}></TextInput>
@@ -14,7 +13,8 @@ export default function App() {
           <View style={{marginLeft: 16}}>
             <View style={{backgroundColor: 'pink', width: 36, height: 36}}></View>
           </View>
-        </View>
+      </View>
+      <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
         {/* Header Section */}
         <View style={{marginHorizontal: 16, marginTop: 8}}>
           {/* Upper Header Section */}
