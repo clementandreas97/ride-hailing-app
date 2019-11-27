@@ -1,25 +1,86 @@
 
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator }from 'react-navigation-stack';
-import { Home, Account } from '../../containers/pages';
+import { Account, Help, Home, Inbox, Orders } from '../../containers/pages';
 
-const Router = createStackNavigator(
+const AccountStack = createStackNavigator(
+  {
+    Account: {
+      screen: Account
+    }
+  },
+  {
+    initialRouteName: 'Account'
+  }
+)
+
+const HelpStack = createStackNavigator(
+  {
+    Help: {
+      screen: Help
+    }
+  },
+  {
+    initialRouteName: 'Help'
+  }
+)
+
+const HomeStack = createStackNavigator(
   {
     Home: {
       screen: Home,
       navigationOptions: {
         header: null
       }
+    }
+  },
+  {
+    initialRouteName: 'Home'
+  }
+)
+
+const OrderStack = createStackNavigator(
+  {
+    Orders: {
+      screen: Orders
+    }
+  },
+  {
+    initialRouteName: 'Orders'
+  }
+)
+
+const InboxStack = createStackNavigator(
+  {
+    Inbox: {
+      screen: Inbox
+    }
+  },
+  {
+    initialRouteName: 'Inbox'
+  }
+)
+
+const Router = createSwitchNavigator(
+  {
+    HomeStack: {
+      screen: HomeStack
     },
-    Account: {
-      screen: Account,
-      navigationOptions: {
-        headerTitle: 'My Account'
-      }
+    OrderStack: {
+      screen: OrderStack
+    },
+    HelpStack: {
+      screen: HelpStack
+    },
+    InboxStack: {
+      screen: InboxStack
+    },
+    AccountStack: {
+      screen: AccountStack
     }
   }, 
   {
-    initialRouteName: 'Home'
+    initialRouteName: 'HomeStack'
   }
 );
 
